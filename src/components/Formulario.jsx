@@ -15,6 +15,7 @@ export default function Formulario() {
             setAlerta('Todos los campos son Obligatorios')
             return
         }
+        setAlerta('')
         consultarClima(busqueda)
     }
 
