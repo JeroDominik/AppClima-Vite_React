@@ -1,12 +1,17 @@
 import Formulario from './Formulario'
+import Resultado from './Resultado'
+import useClima from '../hooks/useClima'
 
 export default function AppClima() {
+
+  const { resultado } = useClima()
+
   return (
     <>
         <main className='dos-columnas'>
-            <Formulario/>
+          <Formulario/>
 
-            
+          {resultado?.name && <Resultado/>}
         </main>
     </>
   )
